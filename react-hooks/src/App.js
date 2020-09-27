@@ -4,17 +4,17 @@ import React from "react";
 // import RefExample from './components/RefExample';
 // import MemoExample from './components/MemoExample';
 // import CallbackExample from './components/CallbackExample';
-import ContextAlertComponent from "./components/ContextAlertComponent";
-import ContextMainComponent from "./components/ContextMainComponent";
-import { AlertProvider } from './contexts/AlertContext'
+
+// import ContextAlertComponent from "./components/ContextAlertComponent";
+// import ContextMainComponent from "./components/ContextMainComponent";
+// import { AlertProvider } from './contexts/AlertContext'
+
+import CustomHook from "./components/CustomHook";
 
 function App() {
   return (
     <div>
-      <AlertProvider>
-        <ContextAlertComponent />
-        <ContextMainComponent />
-      </AlertProvider>
+      <CustomHook />
     </div>
   );
 }
