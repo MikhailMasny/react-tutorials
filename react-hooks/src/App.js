@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import StateExample from './pages/StateExample'
+import EffectExample from './pages/EffectExample'
 
 function App() {
   return (
     <div>
-      <StateExample />
+      {/* <StateExample /> */}
+      <EffectExample />
     </div>
   );
 }
