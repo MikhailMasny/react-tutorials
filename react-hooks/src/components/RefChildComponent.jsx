@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 
 function RefChildComponent(props) {
   const focus = () => props.inputElement.current.focus();

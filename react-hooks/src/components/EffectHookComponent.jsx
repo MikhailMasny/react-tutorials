@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { API_JSONPLACEHOLDER } from "../constants/url.constant";
 
-function EffectExample() {
+function EffectHookComponent() {
   const [type, setType] = useState("users");
   const [data, setDate] = useState([]);
   const [pos, setPos] = useState({
@@ -9,7 +10,7 @@ function EffectExample() {
   });
 
   function getData(type) {
-    fetch(`https://jsonplaceholder.typicode.com/${type}`)
+    fetch(`${API_JSONPLACEHOLDER + type}`)
       .then((response) => response.json())
       .then((json) => setDate(json));
   }
@@ -48,4 +49,4 @@ function EffectExample() {
   );
 }
 
-export default EffectExample;
+export default EffectHookComponent;

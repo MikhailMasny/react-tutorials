@@ -4,7 +4,7 @@ function CallbackChildComponent(props) {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    console.log('render');
+    console.log("render");
     const newItems = props.getItems();
     setItems(newItems);
   }, [props.getItems]);

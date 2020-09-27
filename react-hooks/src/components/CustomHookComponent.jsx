@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useLogger } from "../hooks/logger.hook";
 import { useInput } from "../hooks/input.hook";
 
-function CustomHook() {
+function CustomHookComponent() {
   const input = useInput("");
 
   useLogger(input.value);
@@ -17,4 +17,4 @@ function CustomHook() {
   );
 }
 
-export default CustomHook;
+export default CustomHookComponent;

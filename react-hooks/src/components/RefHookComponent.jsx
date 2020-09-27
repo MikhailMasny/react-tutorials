@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import RefChildComponent from "./RefChildComponent";
 
-function RefExample() {
+function RefHookComponent() {
   const [value, setValue] = useState(1);
   const renderCount = useRef(1);
   const inputElement = useRef(null);
-  const prevValue = useRef('');
+  const prevValue = useRef("");
 
   useEffect(() => {
     renderCount.current++;
@@ -13,8 +13,8 @@ function RefExample() {
 
   useEffect(() => {
     prevValue.current = value;
-  }, [value])
-  
+  }, [value]);
+
   return (
     <div>
       <h1>Renders: {renderCount.current}</h1>
@@ -30,4 +30,4 @@ function RefExample() {
   );
 }
 
-export default RefExample;
+export default RefHookComponent;

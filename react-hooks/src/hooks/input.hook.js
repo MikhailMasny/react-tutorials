@@ -5,16 +5,16 @@ export function useInput(initialValue) {
 
   const onChange = (event) => {
     setValue(event.target.value);
-  }
+  };
 
-  const clear = () => setValue('');
+  const clear = () => setValue("");
 
   return {
     bind: {
       value,
-      onChange
+      onChange,
     },
     value,
-    clear
-  }
+    clear,
+  };
 }

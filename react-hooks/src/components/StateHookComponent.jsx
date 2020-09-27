@@ -5,7 +5,7 @@ function computeInitialCounter() {
   return Math.trunc(Math.random() * 20);
 }
 
-function StateExample() {
+function StateHookComponent() {
   const [counter, setCounter] = useState(0);
   // const [counter, setCounter] = useState(() => {
   //   return computeInitialCounter();
@@ -47,4 +47,4 @@ function StateExample() {
   );
 }
 
-export default StateExample;
+export default StateHookComponent;

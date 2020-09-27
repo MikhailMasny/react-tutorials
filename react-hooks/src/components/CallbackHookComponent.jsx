@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react";
 import CallbackChildComponent from "./CallbackChildComponent";
 
-function CallbackExample() {
+function CallbackHookComponent() {
   const [colored, setColored] = useState(false);
   const [count, setCount] = useState(1);
 
@@ -35,4 +35,4 @@ function CallbackExample() {
   );
 }
 
-export default CallbackExample;
+export default CallbackHookComponent;

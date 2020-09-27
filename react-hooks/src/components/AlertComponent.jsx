@@ -1,12 +1,15 @@
 import React from "react";
-import { useAlert } from "../contexts/AlertContext";
+import { useAlert } from "../contexts/alert.context";
 
-function ContextAlertComponent() {
+function AlertComponent() {
   const alert = useAlert();
-  console.log(alert);
+
+  // console.log(alert);
+
   if (!alert.visible) {
     return null;
   }
+
   return (
     <div>
       <p>Alert text: {alert.text}</p>
@@ -15,4 +18,4 @@ function ContextAlertComponent() {
   );
 }
 
-export default ContextAlertComponent;
+export default AlertComponent;

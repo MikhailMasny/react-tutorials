@@ -9,7 +9,7 @@ function complexCompute(num) {
   return num * 2;
 }
 
-function MemoExample() {
+function MemoHookComponent() {
   const [number, setNumber] = useState(2);
   const [colored, setColored] = useState(false);
 
@@ -17,20 +17,23 @@ function MemoExample() {
     return complexCompute(number);
   }, [number]);
 
-  const styles = useMemo(() => ({
-    color: colored ? "red" : "black",
-  }), [colored]);
+  const styles = useMemo(
+    () => ({
+      color: colored ? "red" : "black",
+    }),
+    [colored]
+  );
 
   useEffect(() => {
     console.log("Run useEffect");
   }, [styles]);
 
   function increment() {
-    setNumber(prev => prev + 1);
+    setNumber((prev) => prev + 1);
   }
 
   function decrement() {
-    setNumber(prev => prev - 1);
+    setNumber((prev) => prev - 1);
   }
 
   return (
@@ -43,4 +46,4 @@ function MemoExample() {
   );
 }
 
-export default MemoExample;
+export default MemoHookComponent;

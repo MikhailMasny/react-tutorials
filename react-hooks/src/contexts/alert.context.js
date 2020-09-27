@@ -1,10 +1,8 @@
 import React, { useContext, useReducer, createContext } from "react";
+import { ALERT_SHOW, ALERT_HIDDEN } from "../constants/reducer.constant";
 
 const AlertContext = createContext();
 // const AlertToggleContext = createContext();
-
-const ALERT_SHOW = 'show';
-const ALERT_HIDDEN = 'hidden';
 
 const reducer = (state, action) => {
   switch (action.type) {
