@@ -1,12 +1,14 @@
 import React from "react";
-import StateExample from './pages/StateExample'
-import EffectExample from './pages/EffectExample'
+import StateExample from './components/StateExample';
+import EffectExample from './components/EffectExample';
+import RefExample from './components/RefExample';
 
 function App() {
   return (
     <div>
       {/* <StateExample /> */}
-      <EffectExample />
+      {/* <EffectExample /> */}
+      <RefExample />
     </div>
   );
 }

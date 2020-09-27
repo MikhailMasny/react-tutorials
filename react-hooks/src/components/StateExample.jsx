@@ -13,10 +13,10 @@ function StateExample() {
 
   const simpleObject = {
     title: "Counter",
-    date: Date.now()
+    date: Date.now(),
   };
 
-  const [obj, setObj] = useState(simpleObject)
+  const [obj, setObj] = useState(simpleObject);
 
   function increment() {
     setCounter(counter + 1);
@@ -28,12 +28,12 @@ function StateExample() {
   }
 
   function updateTitle() {
-    setObj(prev => {
+    setObj((prev) => {
       return {
         ...prev,
-        title: "New Counter"
-      }
-    })
+        title: "New Counter",
+      };
+    });
   }
 
   return (
@@ -42,9 +42,7 @@ function StateExample() {
       <button onClick={increment}>Add</button>
       <button onClick={decrement}>Sub</button>
       <button onClick={updateTitle}>Change title</button>
-      <pre>
-        {JSON.stringify(obj, null, 2)}
-      </pre>
+      <pre>{JSON.stringify(obj, null, 2)}</pre>
     </div>
   );
 }

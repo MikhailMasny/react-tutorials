@@ -4,8 +4,9 @@ function EffectExample() {
   const [type, setType] = useState("users");
   const [data, setDate] = useState([]);
   const [pos, setPos] = useState({
-    x: 0, y: 0
-  })
+    x: 0,
+    y: 0,
+  });
 
   function getData(type) {
     fetch(`https://jsonplaceholder.typicode.com/${type}`)
@@ -16,9 +17,9 @@ function EffectExample() {
   const mouseMoveHandler = (event) => {
     setPos({
       x: event.clientX,
-      y: event.clientY
+      y: event.clientY,
     });
-  }
+  };
 
   // Rendering a component every time
   useEffect(() => {
@@ -32,8 +33,8 @@ function EffectExample() {
     return () => {
       console.log("Dispose");
       window.removeEventListener("mousemove", mouseMoveHandler);
-    }
-  }, [])
+    };
+  }, []);
 
   return (
     <div>
@@ -41,12 +42,8 @@ function EffectExample() {
       <button onClick={() => setType("users")}>Users</button>
       <button onClick={() => setType("todos")}>Todos</button>
       <button onClick={() => setType("posts")}>Posts</button>
-      <pre>
-        {JSON.stringify(pos, null, 2)}
-      </pre>
-      <pre>
-        {JSON.stringify(data, null, 2)}
-      </pre>
+      <pre>{JSON.stringify(pos, null, 2)}</pre>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
     </div>
   );
 }
