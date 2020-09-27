@@ -1,15 +1,16 @@
 import React from "react";
 import { useAlert } from "../contexts/AlertContext";
 
-function ContextAlertComponent(props) {
+function ContextAlertComponent() {
   const alert = useAlert();
+  console.log(alert);
   if (!alert.visible) {
     return null;
   }
   return (
     <div>
-      <p>Alert text: {props.text}</p>
-      <button onClick={alert.toggle}>Close</button>
+      <p>Alert text: {alert.text}</p>
+      <button onClick={alert.hidden}>Close</button>
     </div>
   );
 }

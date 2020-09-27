@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <AlertProvider>
-        <ContextAlertComponent text={'Error'} />
+        <ContextAlertComponent />
         <ContextMainComponent />
       </AlertProvider>
     </div>

@@ -2,12 +2,12 @@ import React from "react";
 import { useAlert } from "../contexts/AlertContext";
 
 function ContextMainComponent() {
-  const alert = useAlert();
-  console.log(alert.toggle);
+  const { show } = useAlert();
+  console.log(show);
   return (
     <div>
       <h1>Context component</h1>
-      <button onClick={alert.toggle}>Show alert</button>
+      <button onClick={() => show('MyTestText')}>Show alert</button>
     </div>
   );
 }
