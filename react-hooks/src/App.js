@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import StateExample from './pages/StateExample'
 
 function App() {
   return (
-    <div></div>
+    <div>
+      <StateExample />
+    </div>
   );
 }
 
