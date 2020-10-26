@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { useState } from "react";
 import * as constant from "../constants/common";
 import { useGetRequest } from "../services/get.hook";
 
 export default function GetRequest() {
-  const [value, setValue] = useState(1)
+  const [value, setValue] = useState(1);
   const result = useGetRequest(constant.GET_JSON_TODO + value);
 
   function random() {

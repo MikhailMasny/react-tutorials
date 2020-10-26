@@ -1,16 +1,20 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-export function useGetRequest(url) {
+export function usePostRequest(url, data) {
+  const headers = {
+    "Content-type": "application/json; charset=UTF-8",
+  };
+
   const [response, setResponse] = useState({});
 
   useEffect(() => {
     async function fetchData() {
-      const result = await axios.get(url);
+      const result = await axios.post(url, data, { headers });
       setResponse(result.data);
     }
     fetchData();
-  }, [url]);
+  }, [url, data]);
 
   return {
     response,
