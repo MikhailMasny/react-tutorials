@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from 'prop-types';
 
 function CallbackChildComponent(props) {
   const [items, setItems] = useState([]);
@@ -17,5 +18,9 @@ function CallbackChildComponent(props) {
     </ul>
   );
 }
+
+CallbackChildComponent.propTypes = {
+  getItems: PropTypes.func
+};
 
 export default CallbackChildComponent;

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import PropTypes from 'prop-types';
 
 function RefChildComponent(props) {
   const focus = () => props.inputElement.current.focus();
@@ -13,5 +14,9 @@ function RefChildComponent(props) {
     </div>
   );
 }
+
+RefChildComponent.propTypes = {
+  inputElement: PropTypes.object
+};
 
 export default RefChildComponent;
